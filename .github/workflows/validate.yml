@@ -26,6 +26,21 @@ jobs:
           test -f research.html
           test -f sources.html
           test -f styles.css
+          test -f books/poor-folk.html
+          test -f books/double.html
+          test -f books/white-nights.html
+          test -f books/dead-house.html
+          test -f books/humiliated.html
+          test -f books/notes-underground.html
+          test -f books/crime-and-punishment.html
+          test -f books/idiot.html
+          test -f books/gambler.html
+          test -f books/demons.html
+          test -f books/eternal-husband.html
+          test -f books/teenager.html
+          test -f books/gentle-creature.html
+          test -f books/dream-funny-man.html
+          test -f books/brothers-karamazov.html
           test -f app.js
       - name: Check page assets
         run: |
