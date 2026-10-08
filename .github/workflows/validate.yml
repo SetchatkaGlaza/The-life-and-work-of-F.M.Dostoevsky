@@ -1,7 +1,7 @@
 name: Validate static site
 on:
   push:
-    branches: ["main", "modern-redesign"]
+    branches: ["main"]
   pull_request:
 jobs:
   validate:
@@ -13,41 +13,5 @@ jobs:
           node-version: 20
       - name: Check JavaScript syntax
         run: node --check app.js
-      - name: Validate HTML, links and assets
+      - name: Run static QA
         run: node tests/validate.mjs
-      - name: Check required pages
-        run: |
-          test -f index.html
-          test -f biography.html
-          test -f chronology.html
-          test -f works.html
-          test -f ideas.html
-          test -f petersburg.html
-          test -f family.html
-          test -f gallery.html
-          test -f research.html
-          test -f sources.html
-          test -f styles.css
-          test -f books/poor-folk.html
-          test -f books/double.html
-          test -f books/white-nights.html
-          test -f books/dead-house.html
-          test -f books/humiliated.html
-          test -f books/notes-underground.html
-          test -f books/crime-and-punishment.html
-          test -f books/idiot.html
-          test -f books/gambler.html
-          test -f books/demons.html
-          test -f books/eternal-husband.html
-          test -f books/teenager.html
-          test -f books/gentle-creature.html
-          test -f books/dream-funny-man.html
-          test -f books/brothers-karamazov.html
-          test -f app.js
-      - name: Check page assets
-        run: |
-          for page in index biography chronology works ideas petersburg family gallery research sources; do
-            test -f "$page.html"
-            grep -q 'styles.css' "$page.html"
-            grep -q 'app.js' "$page.html"
-          done
