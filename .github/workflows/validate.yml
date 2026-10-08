@@ -22,17 +22,20 @@ jobs:
           test -f ideas.html
           test -f petersburg.html
           test -f family.html
+          test -f gallery.html
+          test -f research.html
           test -f sources.html
           test -f styles.css
           test -f app.js
-      - name: Check internal page links
+      - name: Check page assets
         run: |
-          for page in biography chronology works ideas petersburg family sources; do
+          for page in index biography chronology works ideas petersburg family gallery research sources; do
             test -f "$page.html"
+            grep -q 'styles.css' "$page.html"
+            grep -q 'app.js' "$page.html"
           done
-      - name: Check HTML entry points
+      - name: Check navigation targets
         run: |
-          grep -q 'styles.css' index.html
-          grep -q 'app.js' index.html
-          grep -q 'styles.css' biography.html
-          grep -q 'app.js' biography.html
+          grep -RhoE 'href="[^"]+.html' *.html | sed 's/href="//' | sort -u | while read target; do
+            test -f "$target"
+          done
