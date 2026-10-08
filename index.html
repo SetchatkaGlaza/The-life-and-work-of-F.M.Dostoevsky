@@ -1,188 +1,47 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171411">
-  <meta name="description" content="Интерактивный образовательный проект о жизни, творчестве и эпохе Фёдора Михайловича Достоевского.">
-  <title>Достоевский — жизнь, человек, текст</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171411">
+<meta name="description" content="Интерактивный образовательный проект о жизни, творчестве, идеях и эпохе Фёдора Михайловича Достоевского.">
+<title>Достоевский — жизнь, человек, текст</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#content">К содержанию</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="На главную">
-      <span class="brand-mark">ФД</span>
-      <span>ДОСТОЕВСКИЙ<span class="brand-dot">.</span></span>
-    </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="#life">Жизнь</a>
-      <a href="#works">Тексты</a>
-      <a href="#ideas">Идеи</a>
-      <a href="#quiz">Тест</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu>Меню</button>
-  </header>
-
-  <main id="content">
-    <section class="hero" id="top">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">1821—1881 · Москва → Петербург → Сибирь → Европа</p>
-        <h1>Человек есть <em>тайна.</em></h1>
-        <p class="hero-lead">Интерактивный маршрут по жизни и творчеству писателя, который превратил внутреннюю жизнь человека в главный сюжет литературы.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#life">Начать путешествие <span>↓</span></a>
-          <a class="text-link" href="#works">Смотреть произведения</a>
-        </div>
-      </div>
-      <div class="hero-portrait reveal" aria-label="Портрет Фёдора Достоевского">
-        <div class="portrait-frame">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dostoevsky_1872.jpg" alt="Фёдор Достоевский, фотографический портрет 1872 года" loading="eager">
-        </div>
-        <div class="portrait-note">Ф. М. Достоевский<br><span>фотография, XIX век</span></div>
-      </div>
-      <div class="hero-scroll">Прокрутите<br><span>↓</span></div>
-    </section>
-
-    <section class="intro section" id="life">
-      <div class="section-kicker">01 / Жизнь</div>
-      <div class="intro-grid">
-        <div>
-          <h2>Не биография,<br><em>а траектория.</em></h2>
-        </div>
-        <div class="intro-text">
-          <p>Достоевский прожил шестьдесят лет, но его биография ощущается как несколько разных жизней. Москва и инженерное училище, первый литературный успех, арест и инсценировка казни, каторга, возвращение в литературу, путешествия, азарт, семейная жизнь и поздний взлёт.</p>
-          <p>Эта история важна не как набор дат. Она показывает, откуда в его книгах взялись темы свободы, вины, веры, унижения, сострадания и ответственности.</p>
-        </div>
-      </div>
-      <div class="stats-grid">
-        <div class="stat"><strong>60</strong><span>лет жизни</span></div>
-        <div class="stat"><strong>1846</strong><span>«Бедные люди»</span></div>
-        <div class="stat"><strong>4</strong><span>года каторги</span></div>
-        <div class="stat"><strong>5</strong><span>романов «пятикнижия»</span></div>
-      </div>
-    </section>
-
-    <section class="timeline-section section">
-      <div class="section-heading">
-        <div><div class="section-kicker">02 / Хронология</div><h2>Ключевые повороты</h2></div>
-        <p>Выберите период — подробности появятся прямо здесь.</p>
-      </div>
-      <div class="timeline-layout">
-        <div class="timeline" role="tablist" aria-label="Периоды жизни Достоевского">
-          <button class="timeline-item active" role="tab" aria-selected="true" data-year="1821"><span>1821</span><strong>Рождение</strong><small>Москва</small></button>
-          <button class="timeline-item" role="tab" aria-selected="false" data-year="1846"><span>1846</span><strong>Первый успех</strong><small>«Бедные люди»</small></button>
-          <button class="timeline-item" role="tab" aria-selected="false" data-year="1849"><span>1849</span><strong>Перелом</strong><small>Арест и приговор</small></button>
-          <button class="timeline-item" role="tab" aria-selected="false" data-year="1866"><span>1866</span><strong>Возвращение</strong><small>«Преступление и наказание»</small></button>
-          <button class="timeline-item" role="tab" aria-selected="false" data-year="1879"><span>1879</span><strong>Поздняя вершина</strong><small>«Братья Карамазовы»</small></button>
-          <button class="timeline-item" role="tab" aria-selected="false" data-year="1881"><span>1881</span><strong>Последняя глава</strong><small>Петербург</small></button>
-        </div>
-        <article class="timeline-card" aria-live="polite" data-timeline-card></article>
-      </div>
-    </section>
-
-    <section class="works section" id="works">
-      <div class="section-heading">
-        <div><div class="section-kicker">03 / Тексты</div><h2>Вход в Достоевского</h2></div>
-        <p>Не обязательно начинать с самого толстого романа. Выберите то, что вас сейчас интересует.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Фильтр произведений">
-        <button class="filter active" data-filter="all">Все</button>
-        <button class="filter" data-filter="novel">Романы</button>
-        <button class="filter" data-filter="story">Повести</button>
-        <button class="filter" data-filter="short">Рассказы</button>
-        <button class="filter" data-filter="journal">Публицистика</button>
-      </div>
-      <div class="works-grid" data-works></div>
-    </section>
-
-    <section class="ideas section" id="ideas">
-      <div class="section-kicker">04 / Идеи</div>
-      <div class="ideas-intro">
-        <h2>Почему он до сих пор<br><em>говорит с нами?</em></h2>
-        <p>Достоевский не давал простых ответов. Его герои спорят друг с другом, с автором и с самим читателем. Поэтому современное чтение часто превращается в личный разговор.</p>
-      </div>
-      <div class="idea-grid">
-        <button class="idea-card" data-modal="freedom"><span>01</span><h3>Свобода</h3><p>Что происходит, когда человеку дают право самому определить добро и зло?</p><b>Изучить →</b></button>
-        <button class="idea-card" data-modal="guilt"><span>02</span><h3>Вина</h3><p>Можно ли оправдать поступок идеей, обстоятельствами или высокой целью?</p><b>Изучить →</b></button>
-        <button class="idea-card" data-modal="faith"><span>03</span><h3>Вера и сомнение</h3><p>Как жить, когда убеждения сталкиваются с опытом страдания?</p><b>Изучить →</b></button>
-        <button class="idea-card" data-modal="other"><span>04</span><h3>Другой человек</h3><p>Почему сострадание у Достоевского почти всегда связано с ответственностью?</p><b>Изучить →</b></button>
-      </div>
-    </section>
-
-    <section class="petersburg section">
-      <div class="city-copy">
-        <div class="section-kicker">05 / Пространство</div>
-        <h2>Петербург<br>как <em>герой</em></h2>
-        <p>У Достоевского город — не декорация. Петербург тесен, жарок, пыльный, влажный и тревожный. Его улицы связывают реальное пространство с психологией персонажей.</p>
-        <div class="route">
-          <div><span>01</span><b>Кузнечный переулок</b><small>Дом Достоевского</small></div>
-          <div><span>02</span><b>Сенная площадь</b><small>Мир Раскольникова</small></div>
-          <div><span>03</span><b>Невский проспект</b><small>Городская сцена</small></div>
-        </div>
-      </div>
-      <div class="city-map" aria-label="Схематическая карта литературного Петербурга">
-        <div class="map-line line-one"></div><div class="map-line line-two"></div><div class="map-line line-three"></div>
-        <button class="map-point point-one" data-place="Кузнечный переулок">01</button>
-        <button class="map-point point-two" data-place="Сенная площадь">02</button>
-        <button class="map-point point-three" data-place="Невский проспект">03</button>
-        <span class="map-label label-one">Кузнечный</span><span class="map-label label-two">Сенная</span><span class="map-label label-three">Невский</span>
-      </div>
-    </section>
-
-    <section class="quote section">
-      <div class="quote-mark">“</div>
-      <blockquote>Красота спасет мир.</blockquote>
-      <p>Фраза князя Мышкина из романа «Идиот» — одна из самых известных формул Достоевского. Но в контексте романа она звучит не как готовый лозунг, а как вопрос, требующий осмысления.</p>
-      <button class="outline-button" data-modal="quote">Что означает эта фраза? →</button>
-    </section>
-
-    <section class="quiz section" id="quiz">
-      <div class="quiz-head">
-        <div class="section-kicker">06 / Проверка</div>
-        <h2>Насколько хорошо<br><em>вы его знаете?</em></h2>
-        <p>Пять вопросов. Без оценок и пафоса — просто способ закрепить материал.</p>
-      </div>
-      <div class="quiz-card" data-quiz>
-        <div class="quiz-progress"><span data-progress></span></div>
-        <div data-question></div>
-        <div class="quiz-actions"><button class="button button-dark" data-next disabled>Ответить</button><span data-score></span></div>
-      </div>
-    </section>
-
-    <section class="sources section">
-      <div class="section-kicker">07 / Источники</div>
-      <div class="sources-grid">
-        <div><h2>Факты должны выдерживать проверку.</h2><p>Материалы проекта сверены с музейными, библиотечными и культурно-образовательными источниками. Спорные интерпретации обозначены как интерпретации.</p></div>
-        <div class="source-list">
-          <a href="https://www.md.spb.ru/muzej/" target="_blank" rel="noreferrer">Литературно-мемориальный музей Ф. М. Достоевского <span>↗</span></a>
-          <a href="https://culture.ru/persons/8159/fedor-dostoevskii" target="_blank" rel="noreferrer">Культура.РФ — биография <span>↗</span></a>
-          <a href="https://rvb.ru/dostoevski/" target="_blank" rel="noreferrer">Русская виртуальная библиотека <span>↗</span></a>
-          <a href="https://rusmuseumvrm.ru/reference/classifier/keyword/kto_izobr._dostoevskiy.php" target="_blank" rel="noreferrer">Виртуальный Русский музей <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div><span class="brand-mark">ФД</span><strong>Достоевский</strong></div>
-    <p>Интерактивный образовательный проект о жизни и творчестве Ф. М. Достоевского.</p>
-    <a href="#top">↑ Наверх</a>
-  </footer>
-
-  <div class="modal" data-modal-root aria-hidden="true">
-    <div class="modal-backdrop" data-modal-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" type="button" aria-label="Закрыть" data-modal-close>×</button>
-      <div class="section-kicker">Дополнительный контекст</div>
-      <h2 id="modal-title" data-modal-title></h2>
-      <div class="modal-body" data-modal-body></div>
-    </div>
-  </div>
-
-  <script src="app.js" defer></script>
-</body>
-</html>
+<a class="skip-link" href="#content">К содержанию</a>
+<header class="site-header" data-header>
+<a class="brand" href="index.html"><span class="brand-mark">ФД</span><span>ДОСТОЕВСКИЙ<span class="brand-dot">.</span></span></a>
+<nav class="nav" aria-label="Основная навигация">
+<a href="biography.html">Жизнь</a><a href="works.html">Произведения</a><a href="ideas.html">Идеи</a><a href="petersburg.html">Петербург</a><a href="family.html">Окружение</a>
+</nav>
+<button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-menu>Меню</button>
+</header>
+<main id="content">
+<section class="hero" id="top">
+<div class="hero-copy reveal"><p class="eyebrow">1821—1881 · Москва → Петербург → Сибирь → Европа</p>
+<h1>Человек есть <em>тайна.</em></h1>
+<p class="hero-lead">Интерактивный маршрут по жизни и творчеству писателя, который превратил внутреннюю жизнь человека в один из главных сюжетов мировой литературы.</p>
+<div class="hero-actions"><a class="button button-dark" href="biography.html">Изучить жизнь <span>→</span></a><a class="text-link" href="works.html">Перейти к произведениям</a></div></div>
+<div class="hero-portrait reveal"><div class="portrait-frame"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dostoevsky_1872.jpg" alt="Фёдор Достоевский, фотографический портрет 1872 года"></div><div class="portrait-note">Ф. М. Достоевский<br><span>фотография, XIX век</span></div></div>
+<div class="hero-scroll">Прокрутите<br><span>↓</span></div>
+</section>
+<section class="intro section" id="life"><div class="section-kicker">01 / Масштаб</div><div class="intro-grid"><div><h2>Несколько жизней<br><em>в одной.</em></h2></div><div class="intro-text"><p>Москва, инженерное училище, первый литературный успех, арест, инсценировка казни, четыре года каторги, военная служба, возвращение в литературу, журналы, путешествия, семья, поздняя слава.</p><p>Здесь биография собрана не как сухой список дат, а как последовательность переломов, после которых менялся и человек, и писатель.</p></div></div><div class="stats-grid"><div class="stat"><strong>1821</strong><span>год рождения</span></div><div class="stat"><strong>1846</strong><span>«Бедные люди»</span></div><div class="stat"><strong>4</strong><span>года каторги</span></div><div class="stat"><strong>1881</strong><span>год смерти</span></div></div></section>
+<section class="section"><div class="section-heading"><div><div class="section-kicker">02 / Навигация</div><h2>Куда идти дальше</h2></div><p>Сайт разбит на отдельные маршруты — можно читать подряд или выбирать только интересующую тему.</p></div>
+<div class="feature-grid">
+<a class="feature-card" href="biography.html"><span>01</span><h3>Полная биография</h3><p>От семьи и детства до последних лет в Кузнечном переулке.</p><b>Открыть →</b></a>
+<a class="feature-card" href="chronology.html"><span>02</span><h3>Хронология</h3><p>Годы, события, публикации, путешествия, знакомства и повороты судьбы.</p><b>Открыть →</b></a>
+<a class="feature-card" href="works.html"><span>03</span><h3>Произведения</h3><p>Главные романы, повести, рассказы и публицистика с кратким контекстом.</p><b>Открыть →</b></a>
+<a class="feature-card" href="ideas.html"><span>04</span><h3>Идеи</h3><p>Свобода, вина, вера, сострадание, ответственность и «подполье».</p><b>Открыть →</b></a>
+<a class="feature-card" href="petersburg.html"><span>05</span><h3>Петербург</h3><p>Город реальной биографии и пространство его романов.</p><b>Открыть →</b></a>
+<a class="feature-card" href="family.html"><span>06</span><h3>Семья и круг</h3><p>Родные, Анна Григорьевна, братья, друзья, редакторы и современники.</p><b>Открыть →</b></a>
+</div></section>
+<section class="quote section"><div class="quote-mark">“</div><blockquote>Красота спасет мир.</blockquote><p>Фраза князя Мышкина из «Идиота». В романе она не является простой формулой: её смысл раскрывается через конфликт красоты, добра, страдания и человеческого выбора.</p><a class="outline-button" href="ideas.html#beauty">Разобрать контекст →</a></section>
+<section class="section dark-panel"><div class="section-kicker">07 / Проверка</div><div class="split-title"><h2>Знаете его<br><em>лучше, чем думаете?</em></h2><div><p>Пять вопросов по фактам, которые вы встретите в проекте.</p><a class="button button-light" href="chronology.html#quiz">Пройти мини-тест →</a></div></div></section>
+<section class="sources section"><div class="section-kicker">08 / Проверка фактов</div><div class="sources-grid"><div><h2>Не верьте сайту<br><em>на слово.</em></h2><p>Фактический каркас сверяется с музейными, библиотечными и культурно-образовательными источниками.</p></div><div class="source-list"><a href="https://www.md.spb.ru/dostoevskij/biografiya/" target="_blank" rel="noreferrer">Музей Достоевского — хронология <span>↗</span></a><a href="https://culture.ru/persons/8159/fedor-dostoevskii" target="_blank" rel="noreferrer">Культура.РФ — биография <span>↗</span></a><a href="https://rvb.ru/dostoevski/" target="_blank" rel="noreferrer">Русская виртуальная библиотека <span>↗</span></a><a href="sources.html">Все источники проекта <span>→</span></a></div></div></section>
+</main>
+<footer class="footer"><div><span class="brand-mark">ФД</span><strong>Достоевский</strong></div><p>Интерактивный образовательный проект о жизни и творчестве Ф. М. Достоевского.</p><a href="#top">↑ Наверх</a></footer>
+<script src="app.js" defer></script>
+</body></html>
