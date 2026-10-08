@@ -1,0 +1,238 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  }
+  header {
+	  background-color: #f0f0f0;
+  padding: 20px 0;
+  }
+  .container {
+    font-size: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  #container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  .logo {
+  margin-top: -23px;
+  }
+  .logo img {
+  width: 47px;
+  height: auto;
+  margin-top: 0px;
+  }
+  .logo-text {
+  color: red;
+  margin-left: -17px;
+  margin-top: 10px;
+  }
+  .logo-text .ru {
+  color: black;
+ }
+ a {
+  text-decoration: none;
+}
+  nav {
+    float: inline-start;
+    margin-left: 200px;
+  } 
+  nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -5px;
+  }
+  nav li {
+  display: inline-block;
+  margin-left: 20px;
+  }
+  nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+  }
+  nav a:hover {
+  color: red;
+  }
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  }
+     #left-block {
+      width: 40%;
+    } 
+    #left {
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #right {
+      width: 55%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #bio {
+      text-align: justify;
+    } 
+    @media (min-width: 440px){ 
+      video {
+       width: 100%;
+       height: auto;
+      }
+      #right {
+        padding: 10px;
+      }
+      .logo {
+        margin-left: 0;
+       }
+     }
+    @media (max-width: 480px) {
+      #container {
+       flex-direction: column; 
+      }
+      video {
+        width: 100%; 
+        height: auto; 
+       }
+      #left-block, #right {
+       width: 100%;
+       margin-bottom: 20px;
+      }
+      #right {
+        padding: 10px;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+      nav {
+       float: none;
+       text-align: center;
+       margin-left: 0;
+      }
+      nav ul {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+      }
+      nav li {
+       margin-left: 0;
+       margin-bottom: 10px;
+      }
+     }
+     @media (min-width: 481px) and (max-width: 768px) { 
+      #container {
+       flex-direction: column;
+      }
+      #left-block, #right {
+        width: 100%;
+        margin-bottom: 20px;
+       }
+       #right {
+        padding: 10px;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+       nav {
+        float: none;
+        text-align: center;
+        margin-left: 0;
+       }
+       nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       video {
+        width: 100%;
+        height: auto;
+       }
+       nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+       }
+      }
+      @media (min-width: 769px) and (max-width: 1024px) { 
+       #container {
+        flex-direction: column;
+       }
+       #left-block, #right {
+        width: 100%;
+        margin-bottom: 20px;
+       }
+       #right {
+        padding: 10px;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+       video {
+        width: 100%;
+        height: auto;
+       }
+       nav {
+        float: none;
+        text-align: center;
+        margin-left: 0;
+       }
+       nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+       }
+      }
+      @media (min-width: 1024px) and (max-width: 1280px) {
+       #container {
+        flex-direction: row;
+       }
+       #left-block {
+        width: 40%;
+       }
+       #right {
+        width: 55%;
+       }
+       .logo {
+        float: left;
+        margin-left: 100px;
+        margin-top: -23px;
+       }
+       nav {
+        float: inline-start;
+        margin-left: 200px;
+       }
+      }
+      @media (min-width: 1280px) {
+       #container {
+        flex-direction: row;
+       }
+       #left-block {
+        width: 40%;
+       }
+       #right {
+        width: 55%;
+       }
+       .logo {
+        float: left;
+        margin-left: 100px;
+        margin-top: -23px;
+       }
+       nav {
+        float: inline-start;
+        margin-left: 200px;
+       }
+      }
