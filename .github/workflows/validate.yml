@@ -1,0 +1,38 @@
+name: Validate static site
+on:
+  push:
+    branches: ["main", "modern-redesign"]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript syntax
+        run: node --check app.js
+      - name: Check required pages
+        run: |
+          test -f index.html
+          test -f biography.html
+          test -f chronology.html
+          test -f works.html
+          test -f ideas.html
+          test -f petersburg.html
+          test -f family.html
+          test -f sources.html
+          test -f styles.css
+          test -f app.js
+      - name: Check internal page links
+        run: |
+          for page in biography chronology works ideas petersburg family sources; do
+            test -f "$page.html"
+          done
+      - name: Check HTML entry points
+        run: |
+          grep -q 'styles.css' index.html
+          grep -q 'app.js' index.html
+          grep -q 'styles.css' biography.html
+          grep -q 'app.js' biography.html
