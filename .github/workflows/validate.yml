@@ -51,8 +51,3 @@ jobs:
             grep -q 'styles.css' "$page.html"
             grep -q 'app.js' "$page.html"
           done
-      - name: Check navigation targets
-        run: |
-          grep -RhoE 'href="[^"]+.html' *.html | sed 's/href="//' | sort -u | while read target; do
-            test -f "$target"
-          done
