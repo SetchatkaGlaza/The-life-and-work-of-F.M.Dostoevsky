@@ -46,10 +46,15 @@ function setupTimeline(){
  qsa(".timeline-item").forEach(b=>b.addEventListener("click",()=>render(b.dataset.year)));render(1821);
 }
 function setupFilters(){
- qsa("[data-filter-group]").forEach(group=>{
-  const cards=qsa("[data-filter-item]",group),buttons=qsa("[data-filter]",group);
-  buttons.forEach(b=>b.addEventListener("click",()=>{buttons.forEach(x=>x.classList.remove("active"));b.classList.add("active");const filter=b.dataset.filter;cards.forEach(c=>c.hidden=filter!=="all"&&c.dataset.filterItem!==filter);}));
- });
+ const buttons=qsa("[data-filter]");
+ if(!buttons.length)return;
+ const cards=qsa("[data-filter-item]");
+ buttons.forEach(b=>b.addEventListener("click",()=>{
+  buttons.forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  const filter=b.dataset.filter;
+  cards.forEach(c=>c.hidden=filter!=="all"&&c.dataset.filterItem!==filter);
+ }));
 }
 function setupQuiz(){
  const root=qs("[data-quiz]");if(!root)return;
