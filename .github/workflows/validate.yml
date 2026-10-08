@@ -13,6 +13,8 @@ jobs:
           node-version: 20
       - name: Check JavaScript syntax
         run: node --check app.js
+      - name: Validate HTML, links and assets
+        run: node tests/validate.mjs
       - name: Check required pages
         run: |
           test -f index.html
